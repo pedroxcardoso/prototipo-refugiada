@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crie sua conta</title>
+
+
+    <!--ICONSCOUT!-->
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+    <!--STYLESHEET-->
+       <link rel="stylesheet" href="styleF.css">
+    <!--GOOGLE FONTES-->
+</head>
+<body>
+
+  <nav>
+    
+   <div class="all">
+     <div class="left">
+       <a class="anima" href="index.html"> <i id="anime" class="uil uil-sign-in-alt"></i> </a>
+     </div>
+    <div class="mid">
+     <h1>REFUGIABR</h1>
+    </div>
+
+    <div class="right">
+      <button onclick="myFunction()" class="moon"> <i class="uil uil-moon"></i> </button>
+    </div>
+    
+
+  </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <div class="titulo">Registro de Hospedeira</div>
+      <form action="">
+
+        <div class="img" id="inputimg">
+          <img src="imagesF/profile-picture.PNG" id="personaimg" alt=""> <br>
+          <input type="file" id="choosefile" name="img" accept="image/*" onchange="document.getElementById('personaimg').src = window.URL.createObjectURL(this.files[0])" required>          
+        </div>
+
+        <div class="usuario">
+          <div class="input-box">
+            <span class="details">Nome Completo</span>
+            <input type="text" placeholder="Insira seu nome" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" placeholder="Insira seu email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">CPF</span>
+            <input type="text" placeholder="Insira seu CPF" oninput="mascara(this)" maxlength="14" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Data de nascimento</span>
+            <input type="date" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Senha</span>
+            <input type="password" class="password" placeholder="Crie sua senha" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Repita sua senha</span>
+            <input type="password" class="password" placeholder="Confirme suas senha" required>
+          </div>
+        </div>
+        <div class="submit-end">
+          <input class="btn-primary"type="submit" value="Registrar">
+        </div>
+      </form>
+    </div>
+   
+  </main>
+
+
+<script src="scriptF.js"></script>
+</body>
+</html>

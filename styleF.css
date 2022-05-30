@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+html{
+    scroll-behavior: smooth;
+
+}
+
+
+:root{
+    --color-white: hsl(252, 30%, 100%);
+    --color-light: hsl(252, 30%, 95%);
+    --color-gray: hsl(252, 15%, 65%);
+    --color-primary: hsl(252, 75%, 60%);
+    --color-secundary: hsl(252, 100%, 90%);
+    --color-sucess: hsl(120, 95%, 65%);
+    --color-danger: hsl(0, 95%, 65%);
+    --color-dark: hsl(252, 30%, 17%);
+    --color-black: hsl(252, 30%, 10%);
+
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 1rem;
+    --card-padding: 1rem;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color:black;
+    background: var(--color-light);
+    display: flex;
+    height: 100vh;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease;
+}
+
+*{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body a{
+    color: var(--color-gray);
+}
+
+/*==============NAV==============*/
+
+
+nav{
+    width: 100%;
+    background: var(--color-white);
+    padding: 0.7rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+nav h1{
+    color: black;
+}
+
+nav .all{
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+nav .right .moon{
+    display: inline-block;
+    height: 2rem;
+    background: var(--color-gray);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+nav .left i{
+    font-size: 1.6rem;
+}
+
+/*==========FORMULÁRIO===========*/
+
+
+.container{
+    max-width: 700px;
+    width: 100%;
+    background: var(--color-white);
+    padding: 25px 30px;
+    border-radius: var(--card-border-radius);
+    box-shadow: 0 0 0 0, 0 6px 12px rgb(34 34 34 / 20%);
+    transition: all 300ms ease;
+}
+
+.container .titulo{
+    font-size:2rem;
+    font-weight: 600;
+    position: relative;
+    color: black;
+}
+
+.container .titulo::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: var(--color-primary);
+    
+}
+
+.container form .usuario{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+    color: black;
+}
+
+form .usuario .input-box{
+    width: calc(100% / 2 - 20px);
+    margin: 20px 0 12px 0;
+  
+}
+
+.usuario .input-box .details{
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.usuario .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+.container form #inputimg{
+   text-align: center;
+   justify-items: center;
+   padding-top: 1rem;
+}
+
+.container form .filhos-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom:0.5rem;
+    color: var(--color-dark);
+}
+
+
+.container form .title{
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    color: black;
+}
+
+.container form #choosefile{
+    padding-top: 1rem;
+    color:black;
+}
+
+img{
+    height: 100px;
+    width: 100px;
+    border: solid 0.1rem black;
+    border-radius: var(--card-border-radius);
+    box-shadow: 0 0 0 0, 0 6px 12px rgb(34 34 34 / 20%);
+}
+
+.submit-end .btn-primary{
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 1rem;
+}
+
+form .submit-end input{
+    width: 100%;
+    height: 3rem;
+    outline: none;
+}
+
+.submit-end .btn-primary:hover{
+    opacity: 0.8;
+}
+
+.submit-end .btn-primary{
+    background: var(--color-primary);
+    color: white;
+}
+
+form .submit-end{
+   padding-top: 1rem;
+   justify-items: center;
+   text-align: center;
+}
+
+.dark-mode {
+    background-color: var(--color-black);
+    color: white;
+  }
+
+
+/* ====== MEDIA QUERIA ====== */
+
+@media screen and (max-width:594px){
+   .container{
+       max-width: 100%;
+
+   }
+
+   form .usuario .input-box{
+       margin-bottom: 15px;
+       width: 100%;
+   }
+
+   .container form .usuario{
+       max-height: 300px;
+       overflow-y: scroll;
+   }
+
+   .usuario::-webkit-scrollbar{
+       width: 0;
+   }
+}
